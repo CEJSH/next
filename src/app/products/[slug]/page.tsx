@@ -13,6 +13,8 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
+export const revalidate = 3;
+
 export default async function ProductPage({ params: { slug } }: Props) {
   const product = await getProduct(slug);
 
